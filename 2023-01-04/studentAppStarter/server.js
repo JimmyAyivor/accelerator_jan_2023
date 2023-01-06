@@ -10,8 +10,8 @@
 
 const app = require('./app.js');
 
-const port = 9000; // the port we listen on
+const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log(`🎧 Listening on port ${port}!`);
 });
